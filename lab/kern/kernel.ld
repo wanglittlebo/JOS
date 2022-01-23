@@ -50,10 +50,10 @@ SECTIONS
 	.bss : {
 		PROVIDE(edata = .);
 		*(.bss)
-		PROVIDE(end = .);
+		
 		BYTE(0)
 	}
-
+	end = .;
 
 	/DISCARD/ : {
 		*(.eh_frame .note.GNU-stack)
